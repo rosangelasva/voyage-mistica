@@ -286,64 +286,70 @@ footer {
     font-size: 20px;
     
  }
-@media (max-width: 480px) {
-    body {
-        font-size: 14px; 
+ 
+@media (max-width: 767px) {
+    #menu {
+        flex-direction: column; 
+        align-items: center;
+        
     }
-
-    #logo h1 {
-        font-size: 30px;
-    }
-
-    #logo h1 #menu li a {
-        font-size: 12px;
-    }
-
-    section .servico-item {
-       width: calc(100% - 20px);
-    }
-
-    #testemunhos img {
-        width: 60px;
-        height: 60px;
-    }
-
-    footer {
-        padding: 10px 0; 
+    #menu li {
+        margin: 10px 0; 
     }
 }
 
+@media (max-width: 767px) {
+    #logo h1 {
+        font-size: 30px; 
+    }
+}
 
-@media (min-width: 481px) and (max-width: 768px) {
-    body {
+@media (max-width: 767px) {
+    .servico-item {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 767px) {
+    #carouselInterval img {
+        height: auto; 
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    #testemunhos article {
+        flex-direction: column; 
+    }
+    #testemunhos img {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+}
+
+@media (max-width: 767px) {
+    #contato {
+        width: 90%; 
+        padding: 10px; 
+    }
+    .estilo-input, .estilo-textarea {
         font-size: 16px; 
     }
-
-    #logo h1 {
-        font-size: 40px;
-    }
-
-    section .servico-item {
-        width: calc(50% - 20px);
-    }
-
-    #testemunhos img {
-        width: 70px; 
-        height: 70px;
+    .btn-enviar {
+        font-size: 18px; 
     }
 }
 
-@media (min-width: 769px) {
-    body {
-        font-size: 18px; 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    #logo h1 {
+        font-size: 50px; 
     }
 
-    section .servico-item {
-        width: 30%; 
+    #menu {
+        display: flex;
     }
 
-    #testemunhos img {
-        width: 100px; 
-        height: 100px;
-    }
 }
