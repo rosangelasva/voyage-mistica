@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Voyage Mística - Contato</title>
+</head>
+<body>
+    <nav  id="logo">
+        <h1>Voyage Mística </h1>
+
+        <ul id="menu">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#testemunhos">Testemunhos</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            
+        </ul>
+    </nav>
+<main id="main-contato">
+    <section id="contato">
+        <h2>Formulário de Contato</h2>
+            <form action="#" method="post" id="contato-formulario" onsubmit="return validateForm()" novalidate>
+               <div class="separa-input">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="estilo-input" >
+               </div>
+        
+                <div class="separa-input">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" class="estilo-input">
+                </div>
+            
+                <div class="separa-input">
+                    <label for="assunto">Assunto:</label><br>
+                    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto..." class="estilo-input">
+                </div>
+            
+                <div class="separa-input"> 
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" class="estilo-textarea" rows="4" cols="50" placeholder="Digite a mensagem..."  ></textarea>
+                </div>
+            
+               <div class="separa-input">
+                    <input type="submit" value="Enviar" class="btn-enviar"  >
+               </div>
+            </form>
+    </section>
+</main>
+<footer>
+    <div class="footer-content">
+        <div class="social-link">
+            <img src="./img/linkedin.png" alt="imagem-linkedin">
+            <a href="https://www.linkedin.com/in/rosângela-vanderlei-297398206/" target="_blank">@Rosângela Vanderlei</a>
+        </div>
+        <div class="social-link">
+            <img src="./img/github.png" alt="imagem-github">
+            <a href="https://github.com/rosangelasva" target="_blank">@Rosângela Santos</a>
+        </div>
+        <div class="social-link">
+            <img src="./img/instagram.png" alt="imagem-instagram">
+            <a href="https://www.instagram.com/rosangela_vss_/profilecard/?igsh=aWV5bmVqbnhtaTYz" target="_blank">@Rosângela Santos</a>
+        </div>
+    </div>
+    <p class="copy">&copy; Todos os direitos reservados</p>
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

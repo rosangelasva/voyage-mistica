@@ -1,0 +1,349 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+body {
+    font-family: "Inter", sans-serif; 
+    padding: 0; 
+    margin: 0 ;
+    box-sizing: border-box;
+   
+}
+
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: auto;
+    padding: 0; 
+    margin: 0;
+    background-image: url(../img/logo.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logo h1 {
+    color: #14496C;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+ #menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+ #menu li {
+    margin: 0 10px; 
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #f1f6f7;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+#menu li a:hover {
+    background-color: #B5AEA3;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#main-principal {
+    display: flex;
+    max-width: 80%;
+    font-family: "Roboto", sans-serif; 
+    margin: 0 auto;
+}
+  #sobre{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+   
+   
+}
+ #sobre span{
+    display: flex;
+    justify-content: flex-end;
+}
+
+ h2 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+ #carouselInterval .carousel-item {
+  height: 850px;
+  padding: 15px;
+  
+}
+
+#carouselInterval img {
+  object-fit: cover; 
+  height: 100%; 
+  border-radius: 10px;
+}
+
+#carouselInterval .carousel-control-prev,
+#carouselInterval .carousel-control-next {
+  width: 10%; 
+}
+
+
+#carouselInterval .carousel-indicators {
+  bottom: 0; 
+}
+
+#carouselInterval .carousel-indicators li {
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+}
+ .servicos-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.servico-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: calc(33.33% - 20px); 
+    height: auto;
+}
+#servicos ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.servico-item img {
+    width: 200px;
+    margin-right: 15px;
+     margin-bottom: 10px;
+ }
+ 
+  .servico-item h3 {
+     font-size: 1.1em;
+     margin-bottom: 10px;
+ }
+  
+ .det-servico{
+    text-align: justify;
+}
+
+ .det-servico h3{
+    font-weight:bold ;
+}
+
+#testemunhos {
+    font-family: "Montserrat", sans-serif; /
+}
+
+#testemunhos article {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#testemunhos img {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    margin-right: 50px; 
+}
+
+#testemunhos h3 {
+    color: #333; 
+    font-size: 1.2em; 
+    margin-top: 0; 
+}
+
+#testemunhos p {
+    color: #666; 
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+
+footer {
+    background-color: #14496C;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px 0;
+    color:  #f1f6f7;
+}
+
+.footer-content {
+    display: flex; 
+    align-items: center;
+    justify-content: space-around; 
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.social-link {
+    display: flex; 
+    align-items: center; 
+    margin: 0 10px; 
+}
+.social-link a {
+    text-decoration: none;
+    color: #f1f6f7;
+}
+.social-link img {
+    margin-right: 5px; 
+}
+
+.copy {
+    text-align: center; /
+}
+
+
+/*segunda pagina html*/
+#main-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #78c6fb, #284f6c), linear-gradient(135deg, #1c577e, #003359);
+    background-blend-mode: lighten;
+    width: 100%;
+    min-height: 100vh;
+   
+}
+
+#contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:35%;
+    background-color: #14496C;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#contato h2{
+    color:rgb(222, 218, 218);;
+}
+.estilo-input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+.separa-input{
+    margin-bottom: 20px;
+}
+
+.separa-input label{
+    font-size:20px ;
+    color: rgb(222, 218, 218);
+ }
+
+.estilo-textarea{
+    width: 100%;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+ }
+.btn-enviar{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b8cee;
+    margin-bottom: 50px;
+    color: rgb(222, 218, 218);
+    font-size: 20px;
+    
+ }
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; 
+    }
+
+    #logo h1 {
+        font-size: 30px;
+    }
+
+    #logo h1 #menu li a {
+        font-size: 12px;
+    }
+
+    section .servico-item {
+       width: calc(100% - 20px);
+    }
+
+    #testemunhos img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer {
+        padding: 10px 0; 
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px; 
+    }
+
+    #logo h1 {
+        font-size: 40px;
+    }
+
+    section .servico-item {
+        width: calc(50% - 20px);
+    }
+
+    #testemunhos img {
+        width: 70px; 
+        height: 70px;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        font-size: 18px; 
+    }
+
+    section .servico-item {
+        width: 30%; 
+    }
+
+    #testemunhos img {
+        width: 100px; 
+        height: 100px;
+    }
+}

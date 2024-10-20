@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Voyage Mística</title>
+</head>
+<body>
+    <nav  id="logo">
+        <h1>Voyage Mística </h1>
+
+        <ul id="menu">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#testemunhos">Testemunhos</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            
+        </ul>
+    </nav>
+<main id="main-principal">
+
+        <section> 
+              <div id="sobre">
+                <h2>Nossa História
+                </h2>
+                <p>Voyage Mística é uma empresa dedicada a proporcionar experiências de viagem inesquecíveis. Desde 2000, nos comprometemos a transformar sonhos de viagem em realidades memoráveis. Oferecemos pacotes personalizados, reservas de hotéis e aluguel de veículos, sempre com um atendimento ao cliente de excelência.
+                    Nossos destinos são selecionados para atender a todos os gostos, desde a cultura vibrante da Europa até as paisagens deslumbrantes da América Latina. Valorizamos o turismo sustentável e responsável, trabalhando em parceria com comunidades locais para garantir viagens que beneficiem tanto os viajantes quanto os destinos visitados.
+                    Com tecnologia avançada e um time de especialistas dedicados, asseguramos que sua jornada seja tranquila e informativa. Convidamos você a descobrir o mundo conosco, onde cada viagem é uma descoberta e cada destino, uma lembrança para a vida toda.
+                    <br><br>
+                    <span>Explore, sonhe e descubra com a  Voyage Mística.</span> </p> 
+                </div>
+            </div>
+            <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./img/img1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./img/img2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/img3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div id="servicos">
+                <h2>Conheça nossos serviços</h2>
+                <ul class="servicos-lista">
+                    <li class="servico-item">
+                        <img src="./img/ferias.png" alt="Ícone de Pacotes de Viagem">
+                        <div class="det-servico"> 
+                            <h3>Pacotes de Viagem:</h3>
+                            <p>Escolha entre uma variedade de pacotes cuidadosamente selecionados para atender a todos os gostos e orçamentos.</p>
+                        </div>
+                    </li>
+                    <li class="servico-item">
+                        <img src="./img/hotel.png" alt="Ícone de Reservas de Hotel">
+                        <div class="det-servico">
+                            <h3>Reservas de Hotel:</h3>
+                            <p>Encontre o hotel perfeito para a sua estadia, com opções que vão desde hotéis boutique até resorts de luxo.</p>
+                        </div>
+                    </li>
+                    <li class="servico-item">
+                        <img src="./img/carro.png" alt="Ícone de Aluguel de Veículos">
+                        <div class="det-servico">
+                            <h3>Aluguel de Veículos: </h3>
+                            <p>Dirija com tranquilidade em seu destino com os melhores preços em aluguel de veículos.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div id="testemunhos">
+                <h2>Depoimentos:</h2>
+                 
+            </div>
+        </section>
+</main>
+<footer>
+    <div class="footer-content">
+        <div class="social-link">
+            <img src="./img/linkedin.png" alt="imagem-linkedin">
+            <a href="https://www.linkedin.com/in/rosângela-vanderlei-297398206/" target="_blank">@Rosângela Vanderlei</a>
+        </div>
+        <div class="social-link">
+            <img src="./img/github.png" alt="imagem-github">
+            <a href="https://github.com/rosangelasva" target="_blank">@Rosângela Santos</a>
+        </div>
+        <div class="social-link">
+            <img src="./img/instagram.png" alt="imagem-instagram">
+            <a href="https://www.instagram.com/rosangela_vss_/profilecard/?igsh=aWV5bmVqbnhtaTYz" target="_blank">@Rosângela Santos</a>
+        </div>
+    </div>
+    <p class="copy">&copy; Todos os direitos reservados</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const listaDepoimentos = document.getElementById('testemunhos');
+
+  fetch('https://rosangelasva.github.io/servidorJson/dados.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Erro ao carregar depoimentos');
+      }
+      return response.json();
+    })
+    .then(depoimentos => {
+      depoimentos.forEach(depoimento => {
+        const dep = `
+        <article>
+          <img src="${depoimento.img_url}">
+          <div>
+            <h3>${depoimento.nome}</h3>
+            <p>${depoimento.descricao}</p>
+          </div>
+        </article>
+        `;
+        listaDepoimentos.innerHTML += dep;
+      });
+    })
+    .catch(error => {
+      console.error(error.message);
+      alert('Erro ao carregar depoimentos');
+    });
+});
+
+</script>
+<script src="./js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
